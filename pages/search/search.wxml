@@ -1,0 +1,89 @@
+<!--pages/search/search.wxml-->
+<!-- 滚动穿透 -->
+<!-- <page-meta page-style="overflow: {{isOpen ? 'hidden' : 'visible'}}" /> -->
+<view class="searchContainer">
+	<!-- 搜索区域 -->
+	<view class="header">
+		<view class="searchInput">
+			<text class="iconfont icon-sousuo searchIcon"></text>
+			<input type="text" model:value="{{searchContent}}" placeholder="搜索题库" class="placeholder"/>
+			<text class="iconfont icon-lajitong clear" hidden="{{!searchContent}}"></text>
+		</view>
+	</view>
+	<!-- 筛选 -->
+	<view class="screen">
+		<view class="item" bindtap="isOpen" wx:for="{{screenItem}}" wx:key="*this" data-index="{{index}}">
+			<text>{{item.name}}</text>
+			<text class="iconfont icon-jiantou_liebiaoshouqi_o" wx:if="{{isOpen && index === currentIndex}}"></text>
+			<text class="iconfont icon-jiantou_liebiaozhankai_o" wx:else></text>
+			<text class="selected">{{item.option[item.selected]}}</text>
+		</view>
+	</view>
+	<!-- 隐藏筛选项 -->
+	<view class="cover">
+	<view class="coverOption" wx:for="{{screenItem}}" wx:key="*this" wx:if="{{isOpen && index === currentIndex}}">
+		<scroll-view scroll-y enable-flex>
+			<view class="optionItem" wx:for="{{item.option}}" wx:for-item="oItem" wx:for-index="oIndex" bindtap="isSelected" data-index="{{oIndex}}" wx:key="*this">
+				<text class="iconfont icon-duigou" wx:if="{{oIndex === item.selected}}"></text>
+				<text wx:else></text>
+				
+			{{oItem}}
+			</view>
+		</scroll-view>
+		<view class="btn" bindtap="isOk">确定</view>
+	</view>
+	</view>
+	<!-- 列表 -->
+	<view class="resultList">
+		<scroll-view scroll-y enable-flex>
+		<view class="listItem">
+			<view class="title">2021全国中小学生考试</view>
+			<view class="count">157题</view>
+			<view class="time">2020.1.13</view>
+			<text class="iconfont icon-jiahao"></text>
+		</view>
+		<view class="listItem">
+			<view class="title">2021全国中小学生考试</view>
+			<view class="count">157题</view>
+			<view class="time">2020.1.13</view>
+			<text class="iconfont icon-jiahao"></text>
+		</view>
+		<view class="listItem">
+			<view class="title">2021全国中小学生考试</view>
+			<view class="count">157题</view>
+			<view class="time">2020.1.13</view>
+			<text class="iconfont icon-jiahao"></text>
+		</view>
+		<view class="listItem">
+			<view class="title">2021全国中小学生考试</view>
+			<view class="count">157题</view>
+			<view class="time">2020.1.13</view>
+			<text class="iconfont icon-jiahao"></text>
+		</view>
+		<view class="listItem">
+			<view class="title">2021全国中小学生考试</view>
+			<view class="count">157题</view>
+			<view class="time">2020.1.13</view>
+			<text class="iconfont icon-jiahao"></text>
+		</view>
+		<view class="listItem">
+			<view class="title">2021全国中小学生考试</view>
+			<view class="count">157题</view>
+			<view class="time">2020.1.13</view>
+			<text class="iconfont icon-jiahao"></text>
+		</view>
+		<view class="listItem">
+			<view class="title">2021全国中小学生考试</view>
+			<view class="count">157题</view>
+			<view class="time">2020.1.13</view>
+			<text class="iconfont icon-jiahao"></text>
+		</view>
+		<view class="listItem">
+			<view class="title">2021全国中小学生考试</view>
+			<view class="count">157题</view>
+			<view class="time">2020.1.13</view>
+			<text class="iconfont icon-jiahao"></text>
+		</view>
+		</scroll-view>
+	</view>
+</view>

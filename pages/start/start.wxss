@@ -1,0 +1,114 @@
+/* pages/start/start.wxss */
+page {
+	height: 100%;
+	background-color: #bae8e8;
+}
+.startContainer {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.title {
+	width: 250rpx;
+	height: 400rpx;
+	text-align: center;
+	line-height: 250rpx;
+	color: #272343;
+	/* 使文字纵向排列 */
+	writing-mode: vertical-lr;
+	font-family: "Lucida Calligraphy", cursive, serif, sans-serif;
+	font-weight: bolder;
+	letter-spacing: 10rpx;
+	font-size: 54rpx;
+	
+}
+.button {
+	width: 370rpx;
+	height: 120rpx;
+	background-color: #ffd803;
+	text-align: center;
+	line-height: 120rpx;
+	font-size: 40rpx;
+	border-radius: 60rpx;
+	animation: show 2.5s cubic-bezier(0.19,1,0.22,1) .5s forwards;
+	opacity: 0;
+}
+.content {
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	animation: show 2.5s cubic-bezier(0.19,1,0.22,1) .5s forwards;
+}
+
+@-webkit-keyframes show {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes show {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.wave {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: 3;
+	opacity: 0.725;
+	height: 293rpx;
+	width: 2450rpx;
+	animation: wave 10s linear infinite;
+}
+.wave-overlapping {
+	z-index: 1;
+	animation: wave 10.25s linear infinite;
+}
+
+@-webkit-keyframes wave {
+	from {
+		transform: translate3d(125rpx,0,0);
+	}
+
+	to {
+		transform: translate3d(1125rpx,0,0);
+	}
+}
+@keyframes wave{
+	from{
+		transform: translate3d(125rpx,0,0);
+	}
+	to{
+		transform: translate3d(1225rpx,0,0);
+	}
+}
+@-webkit-keyframes wave-overlapping {
+	from {
+		transform: translate3d(375rpx,0,0);
+	}
+
+	to {
+		transform: translate3d(1375rpx,0,0);
+	}
+}
+@keyframes wave-overlapping {
+	from {
+		transform: translate3d(375rpx,0,0);
+	}
+
+	to {
+		transform: translate3d(1375rpx,0,0);
+	}
+}

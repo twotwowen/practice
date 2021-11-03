@@ -1,0 +1,87 @@
+<!--index.wxml-->
+<view class="indexContainer">
+	<view class="header">
+		<view class="search" bindtap="toSearch">搜索你需要的题库</view>
+		<view class="img"><image src="../../static/images/taiyang1.png"></image></view>
+	</view>
+	<view class="exerciseList">
+		<view class="sign">打卡</view>
+		<view class="graph">
+			<text class="iconfont icon-quxiantu"></text>
+			打卡曲线
+		</view>
+		<scroll-view class="list" scroll-y enable-flex>
+			<!-- <view class="listItem">
+				<view class="title">2021年全国职教师资考卷</view>
+				<view class="count">
+					<text class="finish">19</text>
+					<text>/</text>
+					<text class="total">98</text>
+				</view>
+			</view> -->
+		<!-- 	<view class="listItem">
+				<view class="title">2021年全国职教师资考卷</view>
+				<view class="count">
+					<text class="finish">19</text>
+					<text>/</text>
+					<text class="total">98</text>
+				</view>
+			</view> -->
+	<!-- 		<view class="listItem">
+				<view class="title">2021年全国职教师资考卷</view>
+				<view class="count">
+					<text class="finish">19</text>
+					<text>/</text>
+					<text class="total">98</text>
+				</view>
+			</view> -->
+			<view class="listItem">
+				<view class="title">2021年全国职教师资考卷</view>
+				<view class="count">
+					<text class="finish">19</text>
+					<text>/</text>
+					<text class="total">98</text>
+				</view>
+			</view>
+			<view class="add">+</view>
+		</scroll-view>
+	</view>
+	<view class="options">
+		<view class="randomTest">
+			<text class="iconfont icon-kaoshi"></text>
+			随机测试
+		</view>
+		<view class="wrong">
+			<text class="iconfont icon-a-bijibenbiji"></text>
+			错题本
+		</view>
+		<view class="notes">
+			<text class="iconfont icon-jibiji-copy"></text>
+			随手记
+		</view>
+		<view class="learn">
+			<text class="iconfont icon-shuju"></text>
+			学习数据
+		</view>
+	</view>
+	<view class="swiperContainer">
+		<swiper class="swiper" autoplay circular >
+			<swiper-item>
+				<!-- <image></image> -->
+				<view class="test">1</view>
+			</swiper-item>
+			<swiper-item>
+				<!-- <image></image> -->
+				<view class="test">2</view>
+			</swiper-item>
+			<swiper-item>
+				<!-- <image></image> -->
+				<view class="test">3</view>
+			</swiper-item>
+			<swiper-item>
+				<!-- <image></image> -->
+				<view class="test">4</view>
+			</swiper-item>
+		</swiper>
+	</view>
+</view>

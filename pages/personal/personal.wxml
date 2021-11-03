@@ -1,0 +1,33 @@
+<!--pages/personal/personal.wxml-->
+<view class="personalContainer">
+	<view class="personalInfo">
+		<image class="bg" src="../../static/images/8.jpg"></image>
+		<view class="register" bindtap="test" wx:if="{{!hasUserInfo}}">立即登录</view>
+		<block wx:else>
+			<image class="userImg" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+			<view class="userNickName">{{userInfo.nickName}}</view>
+		</block>
+		
+	</view>
+	<view class="content">
+		<image class="wave" src="../../static/images/wave1.png"></image>
+		<view class="personalList">
+			<view class="listItem myExercise">
+				<text class="iconfont icon-tiku"></text>
+				我的题库
+				</view>
+			<view class="listItem myMark">
+				<text class="iconfont icon-jifen"></text>
+				我的积分
+				</view>
+			<view class="listItem share">
+				<text class="iconfont icon-fenxiang"></text>
+				分享有礼
+				</view>
+			<view class="listItem feedback">
+				<text class="iconfont icon-yonghufankui"></text>
+				用户反馈
+				</view>
+		</view>
+	</view>
+</view>

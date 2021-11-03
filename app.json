@@ -1,0 +1,52 @@
+{
+    "pages": [
+        
+        "pages/index/index",
+        "pages/communication/communication",
+        "pages/commDetail/commDetail",
+        "pages/search/search",
+        "pages/start/start",
+        "pages/personal/personal",
+        "pages/hotNews/hotNews"
+        
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#bae8e8",
+        "navigationBarTitleText": "刷题宝典",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#272343",
+        "selectedColor": "#bae8e8",
+        "backgroundColor": "#fffffe",
+        "list": [
+            {
+                "text": "首页",
+                "pagePath": "pages/index/index",
+                "iconPath": "/static/images/tabbar/shouye.png",
+                "selectedIconPath": "/static/images/tabbar/shouye-active.png"
+            },
+            {
+                "text": "热点",
+                "pagePath": "pages/hotNews/hotNews",
+                "iconPath": "/static/images/tabbar/tips.png",
+                "selectedIconPath": "/static/images/tabbar/tips-active.png"
+            },
+            {
+                "text": "交谈",
+                "pagePath": "pages/communication/communication",
+                "iconPath": "/static/images/tabbar/goutong.png",
+                "selectedIconPath": "/static/images/tabbar/goutong-active.png"
+            },
+            {
+                "text": "我的",
+                "pagePath": "pages/personal/personal",
+                "iconPath": "/static/images/tabbar/wode.png",
+                "selectedIconPath": "/static/images/tabbar/wode-active.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

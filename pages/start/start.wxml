@@ -1,0 +1,13 @@
+<!--pages/start/start.wxml-->
+<view class="startContainer">
+	<view class="title">
+		刷题高分通关
+	</view>
+	<view class="button" bindtap="toIndex">
+		立即体验
+	</view>
+	<view class="content">
+		<image class="wave" mode="aspectFill" src="../../static/images/wave.png"></image>
+		<image class="wave wave-overlapping" mode="aspectFill" src="../../static/images/wave.png"></image>
+	</view>
+</view>

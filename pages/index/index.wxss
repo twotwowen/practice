@@ -1,0 +1,148 @@
+/**index.wxss**/
+page {
+	height: 100%;
+}
+.indexContainer {
+	height: 100%;
+	background-color: #fffffe;
+	overflow: hidden;
+}
+.header {
+	position: relative;
+	margin-top: 30rpx;
+	width: 100%;
+	height: 100rpx;
+}
+.header .search {
+	width: 525rpx;
+	height: 80rpx;
+	color: gray;
+	font-size: 30rpx;
+	padding-left: 36rpx;
+	line-height: 80rpx;
+	border: 4rpx solid #272343;
+	border-radius: 40rpx;
+	margin-left: 30rpx;
+}
+.header .img {
+	position: absolute;
+	top: 10rpx;
+	right: 30rpx;
+	width: 70rpx;
+	height: 70rpx;
+}
+.header .img image {
+	width: 100%;
+	height: 100%;
+	/* font-size: 50rpx; */
+}
+
+/* 打卡区 */
+.exerciseList {
+	position: relative;
+	/* height: 600rpx; */
+	height: calc(100vh - 488rpx);
+	margin: 0 15rpx;
+	/* border: 4rpx solid #e3f6f5; */
+	border-radius: 40rpx;
+	margin-top: 15rpx;
+}
+.exerciseList .sign {
+	position: absolute;
+	top: 50rpx;
+	left: 40rpx;
+	width: 170rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	color: #272343;
+	background-color: #ffd803;
+	border: 2rpx solid #272343;
+	border-radius: 60rpx;
+	text-align: center;
+	font-size: 38rpx;
+}
+.exerciseList .list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	bottom: 56rpx;
+	left: 24rpx;
+	width: 666rpx;
+	/* height: 378rpx; */
+	height: 67%;
+	border-bottom: 5rpx solid gray;
+}
+.exerciseList .list .listItem {
+	display: flex;
+	justify-content: space-around;
+	width: 590rpx;
+	height: 111rpx;
+	line-height: 111rpx;
+	border: 2rpx solid #272343;
+	border-radius: 40rpx;
+	color: #272343;
+	background-color: #bae8e8;
+	margin: 20rpx 0;
+}
+.exerciseList .list .add {
+	width: 88rpx;
+	height: 88rpx;
+	line-height: 88rpx;
+	border-radius: 50%;
+	border: 2rpx solid #272343;
+	color: #272343;
+	text-align: center;
+	font-size: 62rpx;
+	margin-bottom: 20rpx;
+}
+
+/* option */
+.options {
+	display: flex;
+	height: 150rpx;
+	width: 100%;
+	margin-top: 30rpx;
+}
+.options view {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1;
+}
+.options view text {
+	font-size: 48rpx;
+	margin-bottom: 22rpx;
+}
+.exerciseList .graph {
+	width: 200rpx;
+	position: absolute;
+	right: 57rpx;
+	top: 67rpx;
+}
+.exerciseList .graph text {
+	font-size: 50rpx;
+	color: #ffd803;
+}
+
+/* swiper */
+.swiperContainer {
+  /* margin-top: 20rpx; */
+	height: 150rpx;
+	/* height: calc(100vh - 935rpx); */
+	border: 1rpx solid #272343;
+	border-radius: 12rpx;
+	/* position: relative; */
+	width: 700rpx;
+	/* left: 0;
+	right: 0; */
+	margin: auto;
+}
+.swiperContainer .swiper {
+	width: 100%;
+	height: 100%;
+}
+.swiperContainer .swiper image {
+	width: 100%;
+	height: 100%;
+}

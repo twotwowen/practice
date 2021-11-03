@@ -1,0 +1,59 @@
+<!--pages/commDetail/commDetail.wxml-->
+<view class="commDetailContainer">
+	<view class="header">cookie</view>
+	<view class="content">
+		<scroll-view scroll-y enable-flex>
+		<view class="item left">
+			<view class="img">
+				<image src="../../static/images/taiyang.png"></image>
+			</view>
+			<view class="txt">你好啊</view>
+		</view>
+		<view class="item right">
+			<view class="img">
+				<image src="../../static/images/taiyang.png"></image>
+			</view>
+			<view class="txt">在吗</view>
+		</view>
+		<view class="item right">
+			<view class="img">
+				<image src="../../static/images/taiyang.png"></image>
+			</view>
+			<view class="txt">哈哈哈哈哈哈哈哈哈</view>
+		</view>
+		<view class="item left">
+			<view class="img">
+				<image src="../../static/images/taiyang.png"></image>
+			</view>
+			<view class="txt">在啊嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻</view>
+		</view>
+		<view class="item left">
+			<view class="img">
+				<image src="../../static/images/taiyang.png"></image>
+			</view>
+			<view class="txt">在啊嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼斤斤计较急急急急急急急急急急急急急急急哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</view>
+		</view>
+		<view class="item left">
+			<view class="img">
+				<image src="../../static/images/taiyang.png"></image>
+			</view>
+			<view class="txt">等会我iuugfhbrgfd</view>
+		</view>
+		<view class="item right">
+			<view class="img">
+				<image src="../../static/images/taiyang.png"></image>
+			</view>
+			<view class="txt">     </view>
+		</view>
+		</scroll-view>
+	</view>
+	<view class="footer">
+		<view class="eip">
+			<image src="../../static/images/jiahao.png"></image>
+		</view>
+		<input type="text"/>
+		<view class="submit">
+			<image src="../../static/images/fasong.png"></image>
+		</view>
+	</view>
+</view>
