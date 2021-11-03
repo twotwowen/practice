@@ -1,14 +1,13 @@
 {
     "pages": [
-        
         "pages/index/index",
         "pages/communication/communication",
         "pages/commDetail/commDetail",
         "pages/search/search",
         "pages/start/start",
         "pages/personal/personal",
-        "pages/hotNews/hotNews"
-        
+        "pages/hotNews/hotNews",
+        "pages/practiceStart/practiceStart"
     ],
     "window": {
         "backgroundTextStyle": "light",
