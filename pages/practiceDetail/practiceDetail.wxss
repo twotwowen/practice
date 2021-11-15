@@ -1,0 +1,218 @@
+/* pages/practiceDetail/practiceDetail.wxss */
+page {
+	height: 100%;
+}
+.praticeDetailContainer {
+	height: 100%;
+	padding: 0 20rpx;
+}
+.header {
+	height: 120rpx;
+	text-align: center;
+	border-bottom: 1rpx solid #dddce4;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 26rpx;
+}
+.content {
+	font-size: 30rpx;
+	width: 100%;
+}
+.content text {
+	display: inline-block;
+}
+.other {
+	width: 100%;
+	height: 50rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 25rpx;
+}
+.other .type {
+	color: #fff;
+	background-color: #ffd803;
+}
+
+.options {
+	margin: 30rpx 0;
+}
+.options .optionsItem {
+	position: relative;
+	/* text-align: center; */
+	padding: 10rpx 20rpx;
+	border: 1rpx solid #dddce4;
+	min-height: 110rpx;
+	display: flex;
+	align-items: center;
+	margin-bottom: 30rpx;
+	border-radius: 17rpx;
+}
+.options .optionsItem text {
+	color: #fff;
+	font-size: 30rpx;
+	position: absolute;
+	right: 10rpx;
+	bottom: 5rpx;
+}
+.options .right .righticon {
+	background-color: #008000;
+}
+.options .wrong .wrongicon {
+	background-color: #ec2618;
+}
+.options .click {
+	border: 1rpx solid #f9aa36;
+  background-color: #ffbf0042;
+}
+.options .right {
+	border: 1rpx solid #008000;
+	background-color: #3ed64463;
+}
+.options .wrong {
+	border: 1rpx solid #ec2618;
+	background-color: #e61e0f5e;
+}
+.answer {
+	width: 100%;
+	height: 100rpx;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.yourAnswer .al {
+	color: #ff640a;
+}
+.rightAnswer .al {
+	color: #008000;
+}
+.btn {
+	width: 500rpx;
+	height: 80rpx;
+	text-align: center;
+	line-height: 80rpx;
+	color: #fffffe;
+	background-color: #ffd803;
+	border-radius: 40rpx;
+	margin: auto;
+	margin-bottom: 50rpx;
+}
+.disabled {
+	background-color: #ffd8035c;
+}
+.btnafter {
+	width: 100%;
+	height: 80rpx;
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 50rpx;
+}
+.btnafter .before {
+	width: 200rpx;
+	height: 80rpx;
+	text-align: center;
+	line-height: 80rpx;
+	color: #fffffe;
+	background-color: #ff640a;
+	border-radius: 40rpx;
+}
+.btnafter .after {
+	width: 200rpx;
+	height: 80rpx;
+	text-align: center;
+	line-height: 80rpx;
+	color: #fffffe;
+	background-color: #ffd803;
+	border-radius: 40rpx;
+}
+
+/* 收藏题目 */
+/* 遮罩层 */
+.shadow {
+	width: 100%;
+	height: 100%;
+	z-index: 80;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #000;
+	opacity: .5;
+}
+/* 上滑遮罩层 */
+.collection {
+	width: 100%;
+	height: 666rpx;
+	bottom: 0;
+	position: fixed;
+	background-color: #fffffe;
+	z-index: 98;
+	left: 0;
+	right: 0;
+	border-top-left-radius: 20rpx;
+	border-top-right-radius: 20rpx;
+}
+
+/* 收藏夹 */
+.container-box {
+	height: 100%;
+	padding: 0 30rpx;
+}
+.container-box .header {
+	height: 80rpx;
+	text-align: center;
+	border-bottom: 1rpx solid #dddce4;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 26rpx;
+}
+.container-box .header .iconfont {
+	font-size: 40rpx;
+}
+.container-box .header .complete {
+	color: #ff640a;
+}
+.container-box .create {
+	font-size: 36rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	color: #ff640a;
+	border-bottom: 1rpx solid #dddce4;
+}
+.container-box .files {
+	height: 80rpx;
+	line-height: 80rpx;
+	border-bottom: 1rpx solid #dddce4;
+	padding-left: 28rpx;
+	margin-bottom: 20rpx;
+}
+.container-box .certain {
+	width: 300rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	text-align: center;
+	position: absolute;
+	bottom: 20rpx;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background-color: #ff640a;
+	color: #fff;
+	border-radius: 40rpx;
+}
+.container-box .inputNewFile {
+	height: 80rpx;
+	border-bottom: 1rpx solid #dddce4;
+	display: flex;
+	align-items: center;
+	padding-left: 20rpx;
+}
+.container-box .inputNewFile input {
+	width: 90%;
+}
+/* 文件夹选中 */
+.fileSelect {
+	background-color: #ffbf0042;
+}

@@ -1,0 +1,93 @@
+<!--pages/practiceDetail/practiceDetail.wxml-->
+<view class="praticeDetailContainer">
+	<view class="header">
+		<view class="todayPractice">
+			<view>今日刷题</view>
+			<view>0</view>
+		</view>
+		<view class="rate">
+			<view>进度</view>
+			<view>18/89</view>
+		</view>
+		<view class="time">
+			<view>学习时长</view>
+			<view>0min</view>
+		</view>
+	</view>
+	<view class="content">
+		<text>
+		改革开放初期，确立了公有制为主体的市场经济，多种所有制公共发展，按劳分配为主体，多种分配制度并存，社会市场经济制度等社会主义基本经济制度，这一基本经济制度中，坚持公有制的主体地位是因为
+		</text>
+	</view>
+	<view class="other">
+		<view class="type" wx:if="{{type !== 'radio'}}">多选题</view>
+		<view class="type" wx:else>单选题</view>
+		<!-- 点击显示遮罩层 -->
+		<view class="collect" bindtap="showShadow">
+			<text class="iconfont icon-xihuan"></text>
+			<!-- <text class="iconfont icon-xihuandianjihou" style="color: #e43512;"></text> -->
+			<text>收藏题目</text>
+		</view>
+	</view>
+	<view class="options">
+		<!-- 单选 -->
+		<!-- {{currentId === index ? 'click' : ''}} -->
+		<!-- 多选 -->
+		<!-- {{item.checked ? 'click' : ''}} -->
+		
+		<view class="optionsItem {{type !== 'radio' ? (item.checked ? 'click' : '') : (currentId === index ? 'click' : '')}} {{isSure && item.isRight ? 'right' : ''}} {{isSure && item.isWrong ? 'wrong' : ''}}" bindtap="{{!isSure ? 'optionsItemClick': ''}}" wx:for="{{options}}" wx:key="*this" data-index="{{index}}" >
+		{{item.txt}}
+		<text class="iconfont icon-cuo wrongicon" wx:if="{{isSure && item.isWrong}}"></text>
+		<text wx:else></text>
+		<text class="iconfont icon-duigou1 righticon" wx:if="{{isSure && item.isRight}}"></text>
+		<text wx:else></text>
+		</view>
+
+	</view>
+	<view class="answer" hidden="{{!isSure}}">
+		<view class="yourAnswer">
+		<text>你的答案:</text>
+		<text class="al">{{yourAnswer}}</text>
+		</view>
+		<view class="rightAnswer">
+			<text>正确答案:</text>
+			<text class="al">{{rightAnswer}}</text>
+		</view>
+	</view>
+	<view class="btn {{type === 'radio' ? (currentId === null ? 'disabled': '') : (isMulti ? '' : 'disabled')}}" wx:if="{{!isSure}}" bindtap="{{type === 'radio' ? currentId === null ? '': 'isSure' : isMulti ? 'isSure' : ''}}">确定</view>
+	<view class="btnafter" wx:else>
+		<view class="before">上一题</view>
+		<view class="after">下一题</view>
+	</view>
+	
+	<!-- 收藏题目 -->
+	<!-- 遮罩层 -->
+	<view class="shadow" wx:if="{{isShowShadow}}" bindtap="hideModal"></view>
+	<!-- 上滑高度 -->
+	<view class="collection" wx:if="{{isShowShadow}}" animation="{{animationData}}">
+		<view class="container-box">
+			<view class="header">
+				<text class="iconfont icon-cuo" bindtap="hideModal" wx:if="{{!isCreate}}"></text>
+				<text class="iconfont" bindtap="returnF" wx:else>←</text>
+				<text class="title">选择收藏夹</text>
+				<text class="complete" wx:if="{{isCreate}}" bindtap="fileAdd">完成</text>
+				<text class="complete" style="color: #fffffe;" wx:else>完成</text>
+			</view>
+		<view class="inputNewFile" wx:if="{{isCreate}}">
+				<input placeholder="输入收藏夹名称" placeholder-style="font-size: 26rpx" value="{{newFileName}}" bindinput="changeInput" bindconfirm="fileAdd"/> 
+		</view>
+		  <block wx:else>
+				<view class="create" bindtap="createFile">+创建新的收藏夹</view>
+				<view class="files {{item.checked ? 'fileSelect' : ''}}" wx:for="{{files}}" wx:key="*this" bindtap="fileSelect" data-index="{{index}}">{{item.name}}</view>
+				<view class="certain">确定</view>
+			</block>
+			
+		</view>
+	</view>
+	
+	<view class="cover">
+		<view class="analysis"></view>
+		<view class="peopleNote"></view>
+		<view class="myNote"></view>
+	</view>
+</view>

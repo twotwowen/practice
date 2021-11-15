@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2907233 */
-  src: url('//at.alicdn.com/t/font_2907233_ei0k58ra9ve.woff2?t=1635910999851') format('woff2'),
-       url('//at.alicdn.com/t/font_2907233_ei0k58ra9ve.woff?t=1635910999851') format('woff'),
-       url('//at.alicdn.com/t/font_2907233_ei0k58ra9ve.ttf?t=1635910999851') format('truetype');
+  src: url('//at.alicdn.com/t/font_2907233_ctu51ma7jcs.woff2?t=1636960206325') format('woff2'),
+       url('//at.alicdn.com/t/font_2907233_ctu51ma7jcs.woff?t=1636960206325') format('woff'),
+       url('//at.alicdn.com/t/font_2907233_ctu51ma7jcs.ttf?t=1636960206325') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,26 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jiahao1:before {
+  content: "\e84f";
+}
+
+.icon-xihuandianjihou:before {
+  content: "\e641";
+}
+
+.icon-duigou1:before {
+  content: "\e63b";
+}
+
+.icon-cuo:before {
+  content: "\e6c9";
+}
+
+.icon-xihuan:before {
+  content: "\e640";
 }
 
 .icon-jiantou_liebiaoshouqi_o:before {

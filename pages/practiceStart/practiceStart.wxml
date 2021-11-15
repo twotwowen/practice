@@ -1,2 +1,19 @@
 <!--pages/practiceStart/practiceStart.wxml-->
-<text>pages/practiceStart/practiceStart.wxml</text>
+<view class="practiceStartContainer">
+	<view class="header">
+		<view class="count">
+			<view class="title">刷题数量</view>
+			<!-- <view>--</view> -->
+			<view class="num">34</view>
+		</view>
+		<view class="probability">
+			<view class="title">正确率</view>
+			<!-- <view>--</view> -->
+			<view class="num">89%</view>
+		</view>
+	</view>
+	<view class="option">
+		<view class="">查看已刷题目</view>
+		<view class="">开始刷题</view>
+	</view>
+</view>
