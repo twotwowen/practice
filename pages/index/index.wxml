@@ -35,7 +35,7 @@
 					<text class="total">98</text>
 				</view>
 			</view> -->
-			<view class="listItem">
+			<view class="listItem" bindtap="toPractice">
 				<view class="title">2021年全国职教师资考卷</view>
 				<view class="count">
 					<text class="finish">19</text>

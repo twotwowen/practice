@@ -1,8 +1,10 @@
 {
     "pages": [
-        "pages/practiceDetail/practiceDetail",
+        
         "pages/practiceStart/practiceStart",
+        "pages/practiceDetail/practiceDetail",
         "pages/index/index",
+        
         "pages/communication/communication",
         "pages/commDetail/commDetail",
         "pages/search/search",

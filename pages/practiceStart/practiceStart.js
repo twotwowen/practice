@@ -7,7 +7,13 @@ Page({
     data: {
 
     },
-
+		
+		//查看已刷题目
+		startPractice() {
+			wx.navigateTo({
+				url:'/pages/practiceDetail/practiceDetail'
+			})
+		},
     /**
      * 生命周期函数--监听页面加载
      */

@@ -14,6 +14,11 @@ Page({
 			url:"/pages/search/search"
 		})
 	},
+	toPractice() {
+		wx.navigateTo({
+			url:"/pages/practiceStart/practiceStart"
+		})
+	},
   /**
    * 生命周期函数--监听页面加载
    */

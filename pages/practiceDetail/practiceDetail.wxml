@@ -1,4 +1,6 @@
 <!--pages/practiceDetail/practiceDetail.wxml-->
+<!-- 滚动穿透 -->
+<page-meta page-style="overflow: {{isShowshadow ? 'hidden' : 'visible'}}" />
 <view class="praticeDetailContainer">
 	<view class="header">
 		<view class="todayPractice">
@@ -11,7 +13,7 @@
 		</view>
 		<view class="time">
 			<view>学习时长</view>
-			<view>0min</view>
+			<view>{{time+studyTime}}min</view>
 		</view>
 	</view>
 	<view class="content">
@@ -24,8 +26,8 @@
 		<view class="type" wx:else>单选题</view>
 		<!-- 点击显示遮罩层 -->
 		<view class="collect" bindtap="showShadow">
-			<text class="iconfont icon-xihuan"></text>
-			<!-- <text class="iconfont icon-xihuandianjihou" style="color: #e43512;"></text> -->
+			<text class="iconfont icon-xihuan" wx:if="{{!collectSuccess}}"></text>
+			<text class="iconfont icon-xihuandianjihou" style="color: #e43512;" wx:else></text>
 			<text>收藏题目</text>
 		</view>
 	</view>
@@ -78,8 +80,11 @@
 		</view>
 		  <block wx:else>
 				<view class="create" bindtap="createFile">+创建新的收藏夹</view>
-				<view class="files {{item.checked ? 'fileSelect' : ''}}" wx:for="{{files}}" wx:key="*this" bindtap="fileSelect" data-index="{{index}}">{{item.name}}</view>
-				<view class="certain">确定</view>
+				<scroll-view scroll-y enable-flex catchtouchmove="{{true}}">
+					<view class="files {{item.checked === true ? 'fileSelect' : ''}}" wx:for="{{files}}" wx:key="*this" bindtap="fileSelect" data-index="{{index}}">{{item.name}}</view>
+				</scroll-view>
+				
+				<view class="certain" bindtap="certain">确定</view>
 			</block>
 			
 		</view>

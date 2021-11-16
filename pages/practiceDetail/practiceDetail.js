@@ -1,4 +1,5 @@
 // pages/practiceDetail/practiceDetail.js
+const app = getApp()
 Page({
 
     /**
@@ -56,6 +57,21 @@ Page({
 			// isSelect:false,
 			//文件夹选中index
 			// currentSelect:null
+			
+			//是否收藏成功
+			collectSuccess:false,
+			
+			//页面加载进来时间
+			//startTime:null,
+			//页面卸载时间
+			//endTime:null,
+			//学习时长
+			studyTime:null,
+			//储存定时器
+			setInter:'',
+			
+			//总学习时长
+			time:0
     },
 		
 		isSure() {
@@ -103,7 +119,7 @@ Page({
 				}
 				
 			})
-			console.log(truely)
+			// console.log(truely)
 			//字符串转化为数组
 			yourAnswer = yourAnswer.split('')
 			//自己选的答案错误的添加isWrong
@@ -208,8 +224,10 @@ Page({
 				animation.translateY(0).step()
 				this.setData({
 					animationData: animation.export()
+					
 				})
 			},50)
+	
 		},
 		
 		//隐藏
@@ -237,6 +255,16 @@ Page({
 					isShowShadow: false
 				})
 			},100)
+			
+			//收藏没有确认隐藏后取消勾选
+			// let collectSuccess = this.data.collectSuccess
+			// let files = this.data.files
+			// if(collectSuccess === false) {
+			// 	files.forEach((item,index) => {
+			// 		item.checked = false
+			// 	})
+			// }
+			this.certain()
 		},
 		
 		//新建收藏夹
@@ -283,7 +311,7 @@ Page({
 					return
 				}else {
 					//添加新的文件夹
-					files.push(newFileName)
+					files.push({name:newFileName})
 				}
 				
 			}
@@ -308,11 +336,35 @@ Page({
 				files
 			})
 		},
+		
+		//点击收藏夹后确认
+		certain() {
+			let files = this.data.files
+			//勾选的收藏夹
+			let arr = []
+			files.forEach((item,index) => {
+				if(item.checked === true) {
+					arr.push(item.name)
+				}
+			})
+			// console.log(arr)
+			if(arr.length >= 1) {
+				this.setData({
+					collectSuccess:true,
+					isShowShadow:false
+				})
+			}else {
+				this.setData({
+					collectSuccess:false,
+					isShowShadow:false
+				})
+			}
+		},
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+			console.log("监听页面加载")
     },
 
     /**
@@ -326,21 +378,47 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+			//获取全局变量时间总值
+			this.setData({
+				time:getApp().globalData.todayTimeTotal
+			})
+			console.log("刷题页面显示")
+			//记录学习时长
+			//获取时间戳
+			let startTime = Date.now()
+			let studyTime = this.data.studyTime
+	
+			this.data.setInter = setInterval(() => {
+				let nowTime = Date.now()
+				//去除小数点
+				studyTime = parseInt((nowTime - startTime)/1000/60)
+				// console.log(studyTime)
+			
+				this.setData({
+					studyTime,
+					time:getApp().globalData.todayTimeTotal
+				})
+			//每隔一分钟调用一次
+			},60000)
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
     onHide: function () {
-
+			//清除定时器
+			clearInterval(this.data.setInter)
+			app.globalData.todayTimeTotal += this.data.studyTime
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
     onUnload: function () {
-
+			console.log("刷题页面卸载")
+		
+			clearInterval(this.data.setInter)
+			app.globalData.todayTimeTotal += this.data.studyTime
     },
 
     /**

@@ -1,11 +1,14 @@
 /* pages/practiceDetail/practiceDetail.wxss */
 page {
 	height: 100%;
+	/* overflow: hidden; */
 }
 .praticeDetailContainer {
 	height: 100%;
 	padding: 0 20rpx;
+	position: relative;
 }
+
 .header {
 	height: 120rpx;
 	text-align: center;
@@ -106,7 +109,7 @@ page {
 	height: 80rpx;
 	display: flex;
 	justify-content: space-around;
-	margin-bottom: 50rpx;
+	padding-bottom: 50rpx;
 }
 .btnafter .before {
 	width: 200rpx;
@@ -137,7 +140,7 @@ page {
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: #000;
+	/* background-color: #000; */
 	opacity: .5;
 }
 /* 上滑遮罩层 */
@@ -152,6 +155,7 @@ page {
 	right: 0;
 	border-top-left-radius: 20rpx;
 	border-top-right-radius: 20rpx;
+	box-shadow: 9px -4px 7px 3px #b4a0a0
 }
 
 /* 收藏夹 */
@@ -180,6 +184,10 @@ page {
 	line-height: 80rpx;
 	color: #ff640a;
 	border-bottom: 1rpx solid #dddce4;
+}
+.container-box scroll-view {
+	/* height: calc(100vh - 406rpx); */
+	height: 60%;
 }
 .container-box .files {
 	height: 80rpx;
